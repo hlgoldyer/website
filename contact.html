@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>None Website - Liên Hệ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/loc.png" type="image/x-icon">
+    <style>
+        /* Các style hiện tại */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        menu {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        menu a:hover {
+            text-decoration: underline;
+        }
+
+        .musicfavorite,
+        .mangxahoi {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Thêm style cho button */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+</head>
+
+<body>
+    <menu>
+        <a href="index.html" class="logo">
+            <img src="./img/loc.png" alt="logo">
+        </a>
+
+        <ul>
+            <a href="index.html">Trang chủ</a>
+            <a href="about.html">Giới thiệu</a>
+            <a href="contact.html">Liên hệ</a>
+            <a href="tool/minitool.html">Mini Tool</a>
+        </ul>
+    </menu>
+
+    <h1>Chào mừng bạn đến với website này!</h1>
+    <p><strong>Website</strong> này được thành lập bởi None! Cảm ơn bạn đã truy cập <strong>website</strong> này
+    </p>
+    <p>Liên hệ với tôi!</p>
+
+    <div class="flex items-center min-h-screen bg-gray-50 dark:bg-gray-900">
+        <div class="container mx-auto">
+            <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+                <div class="text-center">
+                    <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">
+                        Liên hệ với chúng tôi
+                    </h1>
+                    <p class="text-gray-400 dark:text-gray-400">
+                        Điền vào biểu mẫu dưới đây để gửi tin nhắn cho chúng tôi.
+                    </p>
+                </div>
+                <div class="m-7">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                        <input type="hidden" name="access_key" value="f1368398-ce1c-4506-82ea-f51c8ea037af" />
+                        <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+                        <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+                        <div class="mb-6">
+                            <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Họ và
+                                tên</label>
+                            <input type="text" name="name" id="name" placeholder="Nguyễn Văn A" required
+                                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Địa chỉ
+                                Email</label>
+                            <input type="email" name="email" id="email" placeholder="ban@congty.com" required
+                                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Tin nhắn
+                                của bạn</label>
+
+                            <textarea rows="5" name="message" id="message" placeholder="Tin nhắn của bạn"
+                                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"
+                                required></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <button type="submit"
+                                class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
+                                Gửi tin nhắn
+                            </button>
+                        </div>
+                        <p class="text-base text-center text-gray-400" id="result"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="musicfavorite">
+        <h2>Bài hát yêu thích</h2>
+        <iframe style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/3riN8YGCi0KPOi6DvQteTF?utm_source=generator" width="100%"
+            height="auto" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; 
+            fullscreen; picture-in-picture" loading="lazy">
+        </iframe>
+    </div>
+
+    <div class="mangxahoi">
+        <h2>Mạng xã hội</h2>
+        <a href="https://www.facebook.com/" target="_blank"><img src="./img/facebook.png" alt="Facebook" width="50"
+                height="50"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="./img/instagram.png" alt="Instagram" width="50"
+                height="50"></a>
+        <a href="https://www.twitter.com/" target="_blank"><img src="./img/twitter.png" alt="Twitter" width="50"
+                height="50"></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="./img/youtube.png" alt="Youtube" width="50"
+                height="50"></a>
+        <a href="https://www.discord.com/" target="_blank"><img src="./img/discord.png" alt="Discord" width="50"
+                height="50"></a>
+        <a href="https://www.tiktok.com/" target="_blank"><img src="./img/tiktok.png" alt="TikTok" width="50"
+                height="50"></a>
+    </div>
+
+    <!-- Kết thúc Website -->
+    <footer>
+        <p>&copy; 2025 None Website</p>
+    </footer>
+
+    <!-- Thêm script -->
+    <script src="script.js"></script>
+    <script>
+        const form = document.getElementById("form");
+        const result = document.getElementById("result");
+
+        form.addEventListener("submit", function (e) {
+            const formData = new FormData(form);
+            e.preventDefault();
+            var object = {};
+            formData.forEach((value, key) => {
+                object[key] = value;
+            });
+            var json = JSON.stringify(object);
+            result.innerHTML = "Vui lòng đợi...";
+
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = json.message;
+                        result.classList.remove("text-gray-500");
+                        result.classList.add("text-green-500");
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message;
+                        result.classList.remove("text-gray-500");
+                        result.classList.add("text-red-500");
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                    result.innerHTML = "Có lỗi xảy ra!";
+                })
+                .then(function () {
+                    form.reset();
+                    setTimeout(() => {
+                        result.style.display = "none";
+                    }, 5000);
+                });
+        });
+
+    </script>
+</body>
+
+</html>

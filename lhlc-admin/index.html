@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <title>lhlc administrator area</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="admin-header">
+
+    <div class="logo-container">
+      <a href="#avatar" class="logo">
+        <img src="/img/loc.png" alt="Logo" class="logo-img">
+      </a>
+    </div>
+    <h2>lhlc Administrator Dashboard</h2>
+    <div class="user-menu-container">
+      <img id="user-avatar" src="" alt="Avatar" class="avatar hidden">
+      <div id="dropdown" class="dropdown hidden">
+        <p>👤 Đổi tên</p>
+        <p>📧 Đổi email</p>
+        <p>🔒 Đổi mật khẩu</p>
+        <p>🖼️ Đổi avatar</p>
+        <p onclick="logout()" id="logout">🚪 Đăng xuất</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h2>Chào mừng đến với hệ thống quản lý <b class="text-underline">lhlc-admin</b>!</h2>
+    <p>Quản lý: <a href="./manager.html">manager</a></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

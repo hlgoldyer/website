@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>None Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="./img/loc.png" type="image/x-icon" />
+</head>
+
+<body>
+
+  <button id="spotify-login-btn" onclick="loginWithSpotify()">🔑 Đăng nhập Spotify</button>
+  <button id="spotify-logout-btn" style="display: none;" onclick="logoutSpotify()">🚪 Đăng xuất</button>
+
+  <p id="token-expiry">Đang kiểm tra token...</p>
+
+  <menu>
+    <a href="index.html" class="logo">
+      <img src="./img/loc.png" alt="logo" />
+    </a>
+    <ul>
+      <a href="index.html">Trang chủ</a>
+      <a href="about.html">Giới thiệu</a>
+      <a href="contact.html">Liên hệ</a>
+      <a href="tool/minitool.html">Mini Tool</a>
+    </ul>
+  </menu>
+
+  <h1>Chào mừng bạn đến với website này!</h1>
+  <p>
+    <strong>Website</strong> này được thành lập bởi None! Cảm ơn bạn đã truy
+    cập <strong>website</strong> này
+  </p>
+
+  <div class="musicfavorite">
+    <h2>Bài hát yêu thích</h2>
+    <iframe style="border-radius: 12px"
+      src="https://open.spotify.com/embed/track/3riN8YGCi0KPOi6DvQteTF?utm_source=generator" width="100%" height="auto"
+      frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; 
+            fullscreen; picture-in-picture" loading="lazy">
+    </iframe>
+  </div>
+
+  <input type="text" id="songSearch" placeholder="Nhập tên bài hát">
+  <button onclick="searchSong()">🔎 Tìm kiếm</button>
+  <h3>Lịch sử tìm kiếm:</h3>
+  <ul id="searchHistory"></ul>
+  <button onclick="clearSearchHistory()">🗑 Xóa lịch sử tìm kiếm</button>
+  <div id="result"></div>
+  <h3>📱 Quét mã QR để mở bài hát:</h3>
+  <div id="qrCodeContainer"></div>
+  <p class="no1843"><b>OUR PLAYLIST:</b> <a href="https://open.spotify.com/playlist/4YsluvnhCmL6Byi6LymRbw?si=7fae47312c544084"
+      target="_blank" rel="noopener noreferrer">watch now!</a></p>
+
+  <div class="mangxahoi">
+    <h2>Mạng xã hội</h2>
+    <a href="https://www.facebook.com/" target="_blank"><img src="./img/facebook.png" alt="Facebook" width="50"
+        height="50" /></a>
+    <a href="https://www.instagram.com/" target="_blank"><img src="./img/instagram.png" alt="Instagram" width="50"
+        height="50" /></a>
+    <a href="https://www.twitter.com/" target="_blank"><img src="./img/twitter.png" alt="Twitter" width="50"
+        height="50" /></a>
+    <a href="https://www.youtube.com/" target="_blank"><img src="./img/youtube.png" alt="Youtube" width="50"
+        height="50" /></a>
+    <a href="https://www.discord.com/" target="_blank"><img src="./img/discord.png" alt="Discord" width="50"
+        height="50" /></a>
+    <a href="https://www.tiktok.com/" target="_blank"><img src="./img/tiktok.png" alt="TikTok" width="50"
+        height="50" /></a>
+  </div>
+
+  <!-- Kết thúc Website -->
+  <footer>
+    <p>&copy; 2025 None Website</p>
+  </footer>
+
+  <!-- Thêm script -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+  <script>
+    const clientId = "f75864111c944887863197ec4a332443";
+    const redirectUri = `${window.location.origin}/spotifycallback.html`; // Tự động lấy domain hiện tại
+    const scope = "user-read-private user-read-email";
+
+    function loginWithSpotify() {
+      const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${encodeURIComponent(
+        redirectUri
+      )}&scope=${encodeURIComponent(scope)}`;
+      window.location.href = authUrl;
+    }
+  </script>
+
+</body>
+
+</html>
